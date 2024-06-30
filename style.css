@@ -42,7 +42,7 @@ header{
     }
 }
 
-.home-page{
+.home-page, .products-page{
     height:70%;
     border-radius:15px ;
     width: 90%;
@@ -54,7 +54,7 @@ header{
     box-shadow: 0px 10px 20px rgba(245, 204, 244, 0.343);
     backdrop-filter: blur(20px);
     color: white;
-    
+    flex-wrap: wrap;
 }
 
 .section1{
@@ -65,10 +65,14 @@ header{
     height: 100vh;
     width: 100vw;
     background-image: url(https://images.unsplash.com/photo-1655392698483-7360a36e59bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
+    background-size: cover; 
 }
 
 .section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     height: 100vh;
     width: 100vw;
     background-image: url(https://images.unsplash.com/photo-1656066834927-5c1e3f5d6fe9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -85,7 +89,7 @@ nav{
     animation: navigation 3s ease-in-out 1 running;
     top: 3%;
 }
-nav ul{
+nav .myList{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -135,7 +139,7 @@ a:hover{
 
 .text-home{
 
-    font-size: 92px;
+    font-size: 82px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -143,6 +147,32 @@ a:hover{
     margin: 20px;
 }
 
-@media screen {
-    (min-height: 680px)
+@media  (max-width: 768px) {
+   .text-home, .picture-home{
+    width:80%;
+    margin: 50px;
+    font-size: clamp(10px, 44px, 50px);
+   }
+   .home-page{
+    height: clamp(70%, 100%, 100%);
+   }
+}
+
+footer{
+    text-align: center;
+    background-color: white;
+    height: 4%;
+    color: black;
+}
+
+.products-page{
+    height: 80%;
+    backdrop-filter: blur(5px);
+}
+
+.product-text, .product-picture{
+    height: 80%;
+    width: 45%;
+    border: 1px solid white;
+    border-radius: 25px;
 }
